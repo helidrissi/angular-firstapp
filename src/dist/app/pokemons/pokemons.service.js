@@ -15,6 +15,9 @@ var PokemonsService = /** @class */ (function () {
     PokemonsService.prototype.getPokemons = function () {
         return mock_pockemons_1.POKEMONS;
     };
+    PokemonsService.prototype.getPokemonTypes = function () {
+        return ['Plante', 'Feu', 'Eau', 'Electric', 'isecte', 'Poison', 'Fée', 'Normal', 'Vol'];
+    };
     // Retourne le pokémon avec l'identifiant passé en paramètre
     PokemonsService.prototype.getPokemon = function (id) {
         var pokemons = this.getPokemons();

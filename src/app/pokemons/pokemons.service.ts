@@ -9,6 +9,11 @@ export class PokemonsService {
     getPokemons(): Pokemon[] {
       return POKEMONS;
     }
+
+    getPokemonTypes(): string[]{
+
+      return ['Plante','Feu','Eau','Electric','isecte','Poison','Fée','Normal','Vol'];
+    }
       
     // Retourne le pokémon avec l'identifiant passé en paramètre
     getPokemon(id: number): Pokemon {
