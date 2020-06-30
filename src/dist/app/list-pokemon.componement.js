@@ -35,4 +35,4 @@ var ListPokemonComponent = /** @class */ (function () {
     return ListPokemonComponent;
 }());
 exports.ListPokemonComponent = ListPokemonComponent;
-//# sourceMappingURL=list.pokemon.component.js.map
+//# sourceMappingURL=list-pokemon.componement.js.map
