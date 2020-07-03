@@ -7,16 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PageNotFoundComponent = /** @class */ (function () {
-    function PageNotFoundComponent() {
+var LoaderComponent = /** @class */ (function () {
+    function LoaderComponent() {
     }
-    PageNotFoundComponent = __decorate([
+    LoaderComponent = __decorate([
         core_1.Component({
-            selector: 'page-404',
-            template: "\n    <div class='center'>\n      <img src=\"http://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png\"/>\n      <h1>Hey, cette page n'existe pas !</h1>\n      <a routerLink=\"/pokemon/all\" class=\"waves-effect waves-teal btn-flat\">\n        Retourner \u00E0 l' accueil\n      </a>\n    </div>\n  "
+            selector: 'pkmn-loader',
+            template: "\n    <div class=\"preloader-wrapper big active\">\n      <div class=\"spinner-layer spinner-blue\">\n        <div class=\"circle-clipper left\">\n          <div class=\"circle\"></div>\n        </div><div class=\"gap-patch\">\n          <div class=\"circle\"></div>\n        </div><div class=\"circle-clipper right\">\n          <div class=\"circle\"></div>\n        </div>\n      </div>\n    </div>\n  "
         })
-    ], PageNotFoundComponent);
-    return PageNotFoundComponent;
+    ], LoaderComponent);
+    return LoaderComponent;
 }());
-exports.PageNotFoundComponent = PageNotFoundComponent;
-//# sourceMappingURL=page-notfound.component.js.map
+exports.LoaderComponent = LoaderComponent;
+//# sourceMappingURL=loader.component.js.map

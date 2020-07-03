@@ -17,6 +17,9 @@ var pokemons_service_1 = require("./pokemons.service");
 var pokemon_form_component_1 = require("./pokemon-form.component");
 var edit_pokemon_component_1 = require("./edit-pokemon.component");
 var forms_1 = require("@angular/forms");
+var serach_pokemon_componenet_1 = require("./serach-pokemon.componenet");
+var loader_component_1 = require("./loader.component");
+var auth_guard_service_1 = require("../auth-guard.service");
 var PokemonsModule = /** @class */ (function () {
     function PokemonsModule() {
     }
@@ -32,10 +35,12 @@ var PokemonsModule = /** @class */ (function () {
                 detail_pokemon_component_1.DetailPokemonComponent,
                 border_card_directive_1.BorderCardDirective,
                 pokemon_type_color_pipe_1.PokemonTypeColorPipe,
+                serach_pokemon_componenet_1.PokemonSearchComponent,
                 edit_pokemon_component_1.EditPokemonComponent,
+                loader_component_1.LoaderComponent,
                 pokemon_form_component_1.PokemonFormComponent
             ],
-            providers: [pokemons_service_1.PokemonsService]
+            providers: [pokemons_service_1.PokemonsService, auth_guard_service_1.AuthGuard]
         })
     ], PokemonsModule);
     return PokemonsModule;

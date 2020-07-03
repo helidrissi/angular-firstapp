@@ -10,6 +10,10 @@ import {PokemonsService} from './pokemons.service'
 import {PokemonFormComponent} from './pokemon-form.component';
 import {EditPokemonComponent} from './edit-pokemon.component';
 import {FormsModule} from '@angular/forms';
+import {PokemonSearchComponent} from './serach-pokemon.componenet';
+import {LoaderComponent} from './loader.component';
+import {AuthGuard} from '../auth-guard.service';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -21,9 +25,11 @@ import {FormsModule} from '@angular/forms';
         DetailPokemonComponent,
         BorderCardDirective,
         PokemonTypeColorPipe,
+        PokemonSearchComponent,
         EditPokemonComponent,
+        LoaderComponent,
         PokemonFormComponent
     ],
-    providers: [PokemonsService]
+    providers: [PokemonsService,AuthGuard]
 })
 export class PokemonsModule { }

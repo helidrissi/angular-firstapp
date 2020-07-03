@@ -20,11 +20,18 @@ var DetailPokemonComponent = /** @class */ (function () {
         this.pokemon = null;
     }
     DetailPokemonComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var id = +this.route.snapshot.paramMap.get('id');
-        this.pokemon = this.pokemonservice.getPokemon(id);
+        this.pokemonservice.getPokemon(id)
+            .subscribe(function (pokemon) { return _this.pokemon = pokemon; });
+    };
+    DetailPokemonComponent.prototype.deletePokemon = function (p) {
+        var _this = this;
+        this.pokemonservice.deletePokemon(p)
+            .subscribe(function (_) { return _this.goBack(); });
     };
     DetailPokemonComponent.prototype.goBack = function () {
-        this.router.navigate(['/pokemons']);
+        this.router.navigate(['/pokemon/all']);
     };
     DetailPokemonComponent.prototype.goEdit = function (po) {
         var link = ['pokemon/edit', po.id];

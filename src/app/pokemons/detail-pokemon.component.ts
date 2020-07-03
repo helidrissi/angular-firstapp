@@ -19,12 +19,20 @@ export class DetailPokemonComponent implements OnInit {
         
   
         let id = +this.route.snapshot.paramMap.get('id');
-        this.pokemon=this.pokemonservice.getPokemon(id);
+        this.pokemonservice.getPokemon(id)
+        .subscribe(pokemon=>this.pokemon=pokemon);
         
+    }
+
+    deletePokemon(p:Pokemon):void{
+
+       this.pokemonservice.deletePokemon(p)
+       .subscribe(_=>this.goBack());
+
     }
   
     goBack(): void {
-        this.router.navigate(['/pokemons']);
+        this.router.navigate(['/pokemon/all']);
     }
 
     goEdit(po:Pokemon): void {

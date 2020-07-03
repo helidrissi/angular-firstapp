@@ -19,7 +19,9 @@ var ListPokemonComponent = /** @class */ (function () {
         this.pokemons = null;
     }
     ListPokemonComponent.prototype.ngOnInit = function () {
-        this.pokemons = this.pokemonservice.getPokemons();
+        var _this = this;
+        this.pokemonservice.getPokemons()
+            .subscribe(function (pokemons) { return _this.pokemons = pokemons; });
     };
     ListPokemonComponent.prototype.selectPokemon = function (pokemon) {
         console.log('Vous avez selectionné ' + pokemon.name);
